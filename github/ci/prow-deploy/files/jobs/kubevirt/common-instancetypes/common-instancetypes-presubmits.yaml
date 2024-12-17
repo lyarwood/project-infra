@@ -14,6 +14,9 @@ presubmits:
     spec:
       containers:
       - image: quay.io/kubevirtci/common-instancetypes-builder:v20241017-30aa54a
+        env:
+        - name: GIMME_GO_VERSION
+          value: "1.22.9"
         command:
         - "/bin/bash"
         - "-c"
